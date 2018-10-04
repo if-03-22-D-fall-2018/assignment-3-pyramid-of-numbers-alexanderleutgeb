@@ -21,7 +21,7 @@
 *** @see MAX_DIGITS
 */
 struct BigInt {
-	/** number of digits of the big int. */
+	int digits[160];
 	int digits_count;
 
 	/** array of digits of big int. */
@@ -76,5 +76,11 @@ void copy_big_int(const struct BigInt *from, struct BigInt *to);
 */
 int main(int argc, char *argv[])
 {
+	char user_Input(MAX_DIGITS);
+	printf("Pyramid of Numbers\n");
+	printf("\n");
+	printf("Please enter a number: ");
+	scanf("%s\n", user_Input);
+	strtobig_int(user_Input);
 	return 0;
 }
